@@ -26,6 +26,8 @@ The Investment Product Sales Tool is a modern, browser-based application designe
 - Node.js 18+ 
 - .NET 8 SDK
 - AWS CLI configured
+- Terraform CLI (v1.5+)
+- Terraform Cloud account
 - Okta developer account
 
 ### Development Setup
@@ -44,6 +46,11 @@ npm run dev
 # In another terminal, start backend
 cd ../backend
 dotnet run
+
+# Initialize Terraform (first time only)
+cd ../infrastructure
+terraform init
+terraform login
 ```
 
 ### Environment Configuration
@@ -134,6 +141,7 @@ VITE_OKTA_CLIENT_ID=your-client-id
 - **AWS Lambda** for serverless compute
 - **Amazon CloudWatch** for monitoring
 - **AWS IAM** for security and access control
+- **Terraform Cloud** for Infrastructure as Code (IaC)
 
 ## 📈 Success Metrics
 
